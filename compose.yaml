@@ -1,0 +1,10 @@
+---
+services:
+  gh-action:
+    image: node:24
+    container_name: query-overpass-gh-action
+    working_dir: /github/workspace
+    volumes:
+      - type: bind
+        source: .
+        target: /github/workspace

@@ -1,0 +1,27 @@
+{
+  "name": "query-overpass-gh-action",
+  "version": "0.0.1",
+  "description": "Use Overpass QL to fetch geodata from OpenStreetMap",
+  "repository": "git@github.com:Flossiraptor/QueryOverpassAction.git",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "osm",
+    "openstreetmap",
+    "overpass",
+    "overpassql"
+  ],
+  "author": "Marcus Deglos <marcus@flossiraptor.net>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1",
+    "osmtogeojson": "^3.0.0-beta.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.62.0"
+  }
+}

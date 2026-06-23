@@ -1,0 +1,35 @@
+name: Query Overpass
+description: Use Overpass QL to fetch geodata from OpenStreetMap.
+
+inputs:
+  query:
+    description: Overpass QL query
+    required: true
+
+  dest:
+    description: Filename where the geodata should be saved
+    required: true
+
+  endpoint:
+    description: URL of the Overpass API server
+    required: false
+    default: https://overpass-api.de/api/interpreter
+
+  format:
+    description: "Output format: xml/json/geojson"
+    required: false
+    default: geojson
+
+  timeout:
+    description: Maximum query time (in milliseconds)
+    required: false
+    default: 30000
+
+  user-agent:
+    description: User-Agent to send to the API server
+    required: false
+    default: GitHub Action +https://github.com/Flossiraptor/QueryOverpassAction
+
+runs:
+  using: node24
+  main: dist/index.js
